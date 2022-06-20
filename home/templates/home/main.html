@@ -10,17 +10,17 @@
     <h5><a style="color: rgb(255, 255, 255)" href="{% url 'user:avatar-load' %}">Cambiar Avatar</a></h5>
 </div>
 {% endif %}
-<h2>Buscador de cursos</h2>
+<h2>Buscador de actividades</h2>
 <hr>
 </hr>
 
 <form action="/search" method="GET">
     <div>
-        <input type="text" name="search_param" id="course_code_or_name" placeholder="Buscar.."
+        <input type="text" name="search_param" id="course_code_or_name" placeholder="Buscar..."
         {% if search_param %} value="{{ search_param }}" {% endif %}
         >
         <input type="submit" value="Buscar">
-        <a style="color: blue" href="{% url 'home:main' %}"><i class="fa fa-undo"></i></a>
+        <a style="color: rgb(255, 255, 255)" href="{% url 'home:main' %}"><i class="fa fa-undo"></i></a>
     </div>
 
 </form>
@@ -33,7 +33,7 @@
 <ul>
     {% for course in courses %}
     <li>
-        Curso: {{course.name}}
+        {{course.name}}
     </li>
     {% endfor %}
 </ul>

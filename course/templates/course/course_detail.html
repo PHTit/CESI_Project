@@ -8,7 +8,7 @@
 <p><h4>Titualr: {{ course.owner }}</h4></p>
 <p><h4>Profesor: {{ course.teacher }}</h4></p>
 <h4>Descripción:</h4>
-<p><textarea readonly rows="5" cols="80" >{{ course.description }}</textarea></p>
+<p><textarea readonly rows="10" cols="100">{{ course.description }}</textarea></p>
 <p><h4>Precio: {{ course.price }}</h4></p>
 <p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de cursos</a></p>
 {% endblock %}
