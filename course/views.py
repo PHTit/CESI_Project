@@ -15,21 +15,21 @@ class CourseListView(ListView):
 class CourseDetailView(DetailView):
     model = Course
     template_name = "course/course_detail.html"
-    fields = ['name', 'code', 'description']
 
 
 class CourseCreateView(LoginRequiredMixin, CreateView):
     model = Course
     success_url = reverse_lazy('course:course-list')
-    fields = ['name', 'code', 'description']
+    fields = '__all__'
 
 
 class CourseUpdateView(LoginRequiredMixin, UpdateView):
     model = Course
     success_url = reverse_lazy('course:course-list')
-    fields = ['name', 'code', 'description']
+    fields = '__all__'
 
 
 class CourseDeleteView(LoginRequiredMixin, DeleteView):
     model = Course
     success_url = reverse_lazy('course:course-list')
+

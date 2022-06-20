@@ -5,21 +5,10 @@
 <h2>Detalle del Curso</h2>
 <hr></hr>
 <p><h3>Curso: {{ course.name }}</h3></p>
-<p><h4>Comienza: {{ course.date_start }}</h4></p>
 <p><h4>Titualr: {{ course.owner }}</h4></p>
 <p><h4>Profesor: {{ course.teacher }}</h4></p>
 <h4>Descripción:</h4>
-<p><textarea readonly rows="7" cols="90" >{{ course.description }}</textarea></p>
+<p><textarea readonly rows="5" cols="80" >{{ course.description }}</textarea></p>
 <p><h4>Precio: {{ course.price }}</h4></p>
 <p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de cursos</a></p>
 {% endblock %}
-
-
-name = models.CharField(max_length=40)
-    description = models.TextField(blank = True, null=True)
-    owner = models.CharField(max_length=40)
-    teacher = models.CharField(max_length=40)
-    category = models.CharField(max_length=40)
-    price = models.IntegerField
-    type = models.CharField(max_length=2, choices=TYPES)
-    date_start = models.DateField

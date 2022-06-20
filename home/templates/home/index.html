@@ -25,11 +25,11 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home:main' %}">Home</a>
-                <a class="navbar-brand" href="{% url 'profesor:profesor-list' %}">Profesores</a>
-                <a class="navbar-brand" href="{% url 'course:course-list' %}">Cursos</a>
-                <a class="navbar-brand" href="{% url 'student:student-list' %}">Estudiantes</a>
+                <a class="navbar-brand" href="{% url 'profesor:profesor-list' %}">Profesionales</a>
+                <a class="navbar-brand" href="{% url 'course:course-list' %}">Actividades</a>
+        <!--        <a class="navbar-brand" href="{% url 'student:student-list' %}">Estudiantes</a> -->
                 {% if user.is_authenticated %}
-                <a class="navbar-brand" href="{% url 'homework:homework-list' %}">Entregables</a>
+        <!--        <a class="navbar-brand" href="{% url 'homework:homework-list' %}">Entregables</a> -->
                 <a class="btn btn-secondary" href="{% url 'user:user-update' %}">Editar usuario</a>
                 <a class="btn btn-primary" href="{% url 'user:user-logout' %}">Cerrar Sesión</a>
                 {% else %}
@@ -44,7 +44,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Este es nuestro Playground Avanzado <br> Django-CoderHouse</h1>
+                            <h1 class="mb-5"> Plataforma SECI <br> </h1>
                             {% if messages %}
                                 {% for message in messages %}
                                 <h4><p style="color: rgb(131, 31, 0)" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p></h4>
@@ -65,9 +65,9 @@
         <footer class="footer bg-light">
             <div class="container">
                 {% if user.is_superuser %}
-                    <h5><p style="color: rgb(0, 20, 131)" >SuperUser</p></h5>
+        <!--            <h5><p style="color: rgb(0, 20, 131)" >SuperUser</p></h5> -->
                 {% else %}
-                    <h5><p style="color: rgb(0, 20, 131)" >Not SuperUser</p></h5>
+        <!--            <h5><p style="color: rgb(0, 20, 131)" >Not SuperUser</p></h5>-->
                 {%endif%}
             </div>
             <div class="container">
@@ -82,7 +82,7 @@
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; CESI</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">

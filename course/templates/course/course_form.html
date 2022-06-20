@@ -7,8 +7,13 @@
 
 <form action="" method="POST">
     {% csrf_token %}
+
     {{ form.as_p }}
-    <input type="submit" class="btn btn-primary" value="Guardar curso" />
+
+    <input type="submit" class="btn btn-primary" value="Guardar" />
+    <a type="submit" class="btn2 btn-primary" href="{% url 'course:course-list' %}">Cancelar</a>
+    
 </form>
 
 {% endblock %}
+
