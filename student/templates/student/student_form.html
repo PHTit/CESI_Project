@@ -7,10 +7,21 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-primary" value="Finalizar Inscripción" />
-    <p></p>
-    <p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de actividades</a></p>
+    {%for field in form%}
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="{{ field.name }}">{{ field.label }} : </label>
+
+        <div class="col-sm-8">
+            {{ field }}
+        </div>
+    </div>
+    <br>
+    {%endfor%}
+
+    <input type="submit" class="btn btn-primary" value="Realizar Inscripción" />
+    <br>
+    <br>
+    <p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a las actividades</a></p>
 
 </form>
 

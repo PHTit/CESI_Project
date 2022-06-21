@@ -1,4 +1,3 @@
-from cgi import print_exception
 from django.db import models
 
 class Course(models.Model):

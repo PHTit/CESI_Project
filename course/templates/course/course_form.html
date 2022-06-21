@@ -2,13 +2,28 @@
 {% load static %}
 {% block seci_project_content %}
 
-<h2>Formulario para guardar/editar curso:</h2>
+<h2>Formulario para guardar/editar actividad:</h2>
 <hr></hr>
+
+        
 
 <form action="" method="POST">
     {% csrf_token %}
 
-    {{ form.as_p }}
+    <!-- {{ form.as_p }} -->
+
+
+
+    {%for field in form%}
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="{{ field.name }}">{{ field.label }} : </label>
+
+        <div class="col-sm-8">
+            {{ field }}
+        </div>
+    </div>
+    <br>
+    {%endfor%}
 
     <input type="submit" class="btn btn-primary" value="Guardar" />
     <a type="submit" class="btn2 btn-primary" href="{% url 'course:course-list' %}">Cancelar</a>
