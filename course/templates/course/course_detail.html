@@ -2,13 +2,15 @@
 {% load static %}
 {% block coderhouse_project_content %}
 
-<h2>Detalle del Curso</h2>
+<h2>Detalle de la actividad</h2>
 <hr></hr>
 <p><h3>Curso: {{ course.name }}</h3></p>
 <p><h4>Titualr: {{ course.owner }}</h4></p>
 <p><h4>Profesor: {{ course.teacher }}</h4></p>
 <h4>Descripción:</h4>
-<p><textarea readonly rows="10" cols="100">{{ course.description }}</textarea></p>
+<p>{{ course.description }}</p>
 <p><h4>Precio: {{ course.price }}</h4></p>
-<p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de cursos</a></p>
+<a class="btn2 btn-primary" href="{% url 'student:student-add' %}">Inscribirse</a>
+<p></p>
+<p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de actividades</a></p>
 {% endblock %}

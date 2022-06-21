@@ -1,5 +1,4 @@
 from django.urls import path
-
 from course import views
 
 
@@ -11,3 +10,5 @@ urlpatterns = [
     path('course/<int:pk>/update', views.CourseUpdateView.as_view(), name='course-update'),
     path('course/<int:pk>/delete', views.CourseDeleteView.as_view(), name='course-delete'),
 ]
+
+

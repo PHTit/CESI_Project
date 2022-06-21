@@ -16,9 +16,9 @@ class StudentDetailView(DetailView):
     template_name = "student/student_detail.html"
 
 
-class StudentCreateView(LoginRequiredMixin, CreateView):
+class StudentCreateView(CreateView):
     model = Student
-    success_url = reverse_lazy('student:student-list')
+    success_url = reverse_lazy('home:main')
     fields = '__all__'
 
 

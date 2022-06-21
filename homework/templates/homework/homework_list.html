@@ -2,22 +2,35 @@
 {% load static %}
 {% block coderhouse_project_content %}
 
-<h2>Lista de Entregables</h2>
-<a class="card_custom" href="{% url 'homework:homework-add' %}">Crear nueva Entrega</a>
-<hr></hr>
-<ul>
-    {% for homework in homeworks %}
-        <li>
-            Entregable: {{homework.name}}
-            -- e-mail: {{homework.due_date}}
-            -- Engregado:
-                {% if homework.is_delivered %}
-                    Si
-                {% else %}
-                    No
-                {% endif%}
-        </li>
-    {% endfor %}
-</ul>
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">Planilla de control</h2>
+        <h4 class="text-center"><em></em></h4>
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Contact Number</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for msg in messages %}
+                    <tr>
+                        <td>{{msg.id}}</td>
+                        <td>{{msg.name}}</td>
+                        <td>{{msg.contact_number}}</td>
+                        <td>{{msg.subject}}</td>
+                        <td>{{msg.message}}</td>
+                        <td>{{msg.added_on}}</td>
+                    </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>
 
 {% endblock %}
