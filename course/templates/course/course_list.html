@@ -1,14 +1,18 @@
 {% extends "home/index.html" %}
 {% load static %}
-{% block coderhouse_project_content %}
-
+{% block seci_project_content %}
+<hr>
 <h2>Lista de Actividades</h2>
 {% if user.is_authenticated %}
+<br>
 <a class="btn2 btn-primary" href="{% url 'course:course-add' %}">Crear nueva Actividad</a>
 {% endif %}
-<hr></hr>
+<br>
+<br>
+<br>
 <ul>
     {% for course in course_list %}
+    <h5>
     <li>
         {{course}}
         (
@@ -28,6 +32,8 @@
         {% endif %}
         )
     </li>
+    </h5>
+    <p></p>
     {% endfor %}
 </ul>
 

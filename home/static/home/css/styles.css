@@ -151,6 +151,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+  text-align: justify;
 }
 
 h6, .h6 {
@@ -11343,17 +11344,18 @@ textarea.form-control-lg {
 }
 
 header.masthead {
-  position: relative;
+  position:relative;
   background-color: #343a40;
   background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
-  background-size: cover;
+  background-size:cover;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+
 }
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  /*background-color: #1c375e;*/
   height: 100%;
   width: 100%;
   top: 0;
@@ -11400,9 +11402,12 @@ header.masthead h1, header.masthead .h1 {
 
 .call-to-action {
   position: relative;
+  background-position: top right;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("../assets/img/bg-masthead.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   padding-top: 7rem;
   padding-bottom: 7rem;
 }

@@ -1,6 +1,6 @@
 {% extends "home/index.html" %}
 {% load static %}
-{% block coderhouse_project_content %}
+{% block seci_project_content %}
 
 
 {% if user.is_authenticated %}
@@ -9,6 +9,8 @@
     <img height="160px" src="{{url}}" alt="">
 </div>
 {% endif %}
+
+<!-- 
 <h2>Buscador de actividades</h2>
 <hr>
 </hr>
@@ -37,5 +39,22 @@
     {% endfor %}
 </ul>
 {% endif %}
+ -->
+<hr></hr>
+<h2>SECI: Una práctica de transformación</h2>
+<p></p>
+<p>El SECI es una Escuela para la Vida, creada por Anni Schuff. Es un innovador sistema integral de trabajo personal para transformar nuestra vida, crear nuevas posibilidades en nuestros entornos y ser agentes de cambio en nuestra sociedad. </p>
+<br>
+<h3>SECI ofrece un método para transitar procesos que permiten crear nuevas realidades y experiencias</h3>
+<br>
+
+<div class="block"><h6><strong>¿Qué significa SECI?</strong></h6><p class="fieldset">Sistema de Entrenamiento Continuo Integral</p></div>
+<br>
+<div class="block"><h6><strong>Misión</strong></h6><p class="fieldset">El objetivo del SECI es acompañar a personas, familias y equipos de trabajo para alcanzar mayores niveles de bienestar, mejorar sus relaciones, concretar sus proyectos y participar responsablemente en las comunidades a las que pertenecen.</p>
+<br>
+<div class="block"><h6><strong>¿Cómo lo hace?</strong></h6><p class="fieldset">A través de actividades que incorporan distintas herramientas para la ampliación de la conciencia y el trabajo práctico en la vida cotidiana. Se trata de un proceso evolutivo continuo, desde el contacto interno con lo esencial de cada persona.</p>
+
+
+
 
 {% endblock %}

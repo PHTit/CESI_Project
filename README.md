@@ -28,7 +28,7 @@ export SECRET_KEY='4e8&y0ygfox1cg7f3owcku9$hv_(nu7t3ku$p637-+!so2jlvs'
 export DEBUG='True'
 export ALLOWED_HOSTS='*,'
 ```
-o crear el archivo `coderhouse_project/.env` con el siguente contenido
+o crear el archivo `seci_project/.env` con el siguente contenido
 ```text
 SECRET_KEY=4e8&y0ygfox1cg7f3owcku9$hv_(nu7t3ku$p637-+!so2jlvs
 DEBUG=True

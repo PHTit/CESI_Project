@@ -1,6 +1,6 @@
 {% extends "home/index.html" %}
 {% load static %}
-{% block coderhouse_project_content %}
+{% block seci_project_content %}
 
 <h2>Formulario de Inscripción</h2>
 <hr></hr>
@@ -8,7 +8,10 @@
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn btn-primary" value="Inscribirse" />
+    <input type="submit" class="btn btn-primary" value="Finalizar Inscripción" />
+    <p></p>
+    <p><a class="btn2 btn-primary" href="{% url 'course:course-list' %}">Regresar a la lista de actividades</a></p>
+
 </form>
 
 {% endblock %}
