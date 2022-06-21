@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
 
 <h2>Lista de Estudiantes</h2>
-<a class="card_custom" href="{% url 'student:student-add' %}">Crear nuevo Estudiante</a>
+<a class="btn2 btn-primary" href="{% url 'student:student-add' %}">Crear nuevo Estudiante</a>
 <hr></hr>
 <ul>
     {% for student in student_list %}

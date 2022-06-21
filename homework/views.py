@@ -1,21 +1,24 @@
 from django.shortcuts import render
-
 from homework.models import Homework
 from homework.forms import HomeworkForm
-
+from student.views import Student
+#from course.views import Course
 
 def homeworks(request):
-    homeworks = Homework.objects.all()
-
+    #homeworks = Student.objects.all()
+    homeworks = Student.objects.raw('SELECT * FROM student_student a JOIN course_course b ON a.course_id = b.id')
+    
     context_dict = {
         'homeworks': homeworks
     }
-
+    
     return render(
         request=request,
         context=context_dict,
         template_name="homework/homework_list.html"
     )
+
+    
 
 
 def homework_form(request):

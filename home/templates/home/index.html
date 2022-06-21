@@ -28,7 +28,7 @@
                 <a class="navbar-brand" href="{% url 'profesor:profesor-list' %}">Profesionales</a>
                 <a class="navbar-brand" href="{% url 'course:course-list' %}">Actividades</a>
                 {% if user.is_authenticated %}
-                <a class="navbar-brand" href="{% url 'student:student-list' %}">Estudiantes</a>
+<!--                <a class="navbar-brand" href="{% url 'student:student-list' %}">Estudiantes</a>         -->
                 <a class="navbar-brand" href="{% url 'homework:homework-list' %}">Planilla</a>
                 <a class="btn btn-secondary" href="{% url 'user:user-update' %}">Editar usuario</a>
                 <a class="btn btn-primary" href="{% url 'user:user-logout' %}">Cerrar Sesión</a>
