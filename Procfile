@@ -1,1 +1,1 @@
-web: gunicorn seci_project.wsgi
+web: gunicorn seci-project.wsgi
